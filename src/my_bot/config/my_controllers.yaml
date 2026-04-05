@@ -1,17 +1,19 @@
 controller_manager:
   ros__parameters:
     update_rate: 30
+    # use_sim_time: true
 
     diff_cont:
       type: diff_drive_controller/DiffDriveController
+      
 
     joint_broad:
       type: joint_state_broadcaster/JointStateBroadcaster
 
-
 diff_cont:
   ros__parameters:
-    publish_rate: 30.0
+
+    publish_rate: 50.0
 
     base_frame_id: base_link
     odom_frame_id: odom
@@ -19,29 +21,51 @@ diff_cont:
 
     left_wheel_names: ['left_wheel_joint']
     right_wheel_names: ['right_wheel_joint']
+    wheel_separation: 0.297
+    wheel_radius: 0.033
 
-    wheel_separation: 0.496
-    wheel_radius: 0.01606
+    # use_stamped_vel: false
 
-    pose_covariance_diagonal: [0.05, 0.05, 0.1, 0.1, 0.1, 0.2]
-    twist_covariance_diagonal: [0.05, 0.05, 0.1, 0.1, 0.1, 0.2]
+    # open_loop: false    
 
-    cmd_vel_timeout: 0.5
-    publish_limited_velocity: true
-    velocity_rolling_window_size: 10
+    # wheels_per_side: x
+    # wheel_separation_multiplier: x
+    # left_wheel_radius_multiplier: x
+    # right_wheel_radius_multiplier: x
 
-    linear.x.has_velocity_limits: true
-    linear.x.max_velocity: 0.12
-    linear.x.min_velocity: -0.12
+    # odom_frame_id: x
+    # pose_covariance_diagonal: x
+    # twist_covariance_diagonal: x
+    # open_loop: x
+    # enable_odom_tf: x
 
-    linear.x.has_acceleration_limits: true
-    linear.x.max_acceleration: 0.12
-    linear.x.min_acceleration: -0.12
+    # cmd_vel_timeout: x
+    # publish_limited_velocity: x
+    # velocity_rolling_window_size: x
+    
 
-    angular.z.has_velocity_limits: true
-    angular.z.max_velocity: 0.35
-    angular.z.min_velocity: -0.35
+    # linear.x.has_velocity_limits: false
+    # linear.x.has_acceleration_limits: false
+    # linear.x.has_jerk_limits: false
+    # linear.x.max_velocity: NAN
+    # linear.x.min_velocity: NAN
+    # linear.x.max_acceleration: NAN
+    # linear.x.min_acceleration: NAN
+    # linear.x.max_jerk: NAN
+    # linear.x.min_jerk: NAN
 
-    angular.z.has_acceleration_limits: true
-    angular.z.max_acceleration: 0.30
-    angular.z.min_acceleration: -0.30
+    # angular.z.has_velocity_limits: false
+    # angular.z.has_acceleration_limits: false
+    # angular.z.has_jerk_limits: false
+    # angular.z.max_velocity: NAN
+    # angular.z.min_velocity: NAN
+    # angular.z.max_acceleration: NAN
+    # angular.z.min_acceleration: NAN
+    # angular.z.max_jerk: NAN
+    # angular.z.min_jerk: NAN
+
+
+
+
+# joint_broad:
+#   ros__parameters:
