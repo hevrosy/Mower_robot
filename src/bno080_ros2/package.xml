@@ -1,0 +1,24 @@
+<package format="3">
+  <name>bno080_ros2</name>
+  <version>0.0.0</version>
+  <description>BNO080 ROS 2 IMU node</description>
+  <maintainer email="rbt@todo.todo">rbt</maintainer>
+  <license>MIT</license>
+
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+
+  <!--  build + runtime support for Python packages  -->
+  <buildtool_depend>ament_python</buildtool_depend>   <!-- ★ add -->
+  <exec_depend>ament_python</exec_depend>             <!-- ★ add -->
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

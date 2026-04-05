@@ -1,0 +1,7 @@
+.git_corrupt/
+build/
+install/
+log/
+*.pyc
+__pycache__/
+.ros/
