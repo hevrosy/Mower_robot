@@ -5,3 +5,15 @@ log/
 *.pyc
 __pycache__/
 .ros/
+
+# Robot runtime logs
+*.log
+
+# Runtime-generated Nav2 params
+src/my_bot/config/nav2_params_runtime.yaml
+
+# Local bags / recordings
+mower_bags/
+*.db3
+*.mcap
+metadata.yaml
