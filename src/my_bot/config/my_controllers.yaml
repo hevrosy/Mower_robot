@@ -31,12 +31,12 @@ diff_cont:
     velocity_rolling_window_size: 10
 
     linear.x.has_velocity_limits: true
-    linear.x.max_velocity: 0.12
-    linear.x.min_velocity: -0.12
+    linear.x.max_velocity: 0.20
+    linear.x.min_velocity: -0.20
 
     linear.x.has_acceleration_limits: true
-    linear.x.max_acceleration: 0.12
-    linear.x.min_acceleration: -0.12
+    linear.x.max_acceleration: 0.20
+    linear.x.min_acceleration: -0.20
 
     angular.z.has_velocity_limits: true
     angular.z.max_velocity: 0.35
